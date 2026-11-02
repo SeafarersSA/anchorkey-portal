@@ -149,18 +149,24 @@ input:focus-visible, select:focus-visible, textarea:focus-visible, a.btn:focus-v
       <div class="grid">
         <div class="f full"><label for="a-name">Full name and surname <span class="req">*</span></label>
           <input id="a-name" data-req="1" autocomplete="name"><div class="err-msg">Enter your full name.</div></div>
+        <div class="f"><label for="a-maiden">Maiden name, if applicable</label><input id="a-maiden" ></div>
         <div class="f"><label for="a-id">ID or passport number <span class="req">*</span></label>
           <input id="a-id" data-req="1" inputmode="numeric" autocomplete="off"><div class="err-msg">Enter your ID or passport number.</div></div>
         <div class="f"><label for="a-dob">Date of birth</label><input id="a-dob" type="date" autocomplete="bday"></div>
+        <div class="f"><label for="a-nat">Nationality</label><input id="a-nat" placeholder="South African"></div><div class="f"><label for="a-marital">Marital status</label><select id="a-marital"><option value="">Select</option><option>Single</option><option>Married in community of property</option><option>Married out of community (ANC)</option><option>Divorced</option><option>Widowed</option><option>Living with partner</option></select></div>
         <div class="f"><label for="a-cell">Cell number <span class="req">*</span></label>
           <input id="a-cell" data-req="1" type="tel" autocomplete="tel" placeholder="082 123 4567"><div class="err-msg">Enter a cell number we can reach you on.</div></div>
         <div class="f"><label for="a-email">Email address <span class="req">*</span></label>
           <input id="a-email" data-req="1" type="email" autocomplete="email"><div class="err-msg">Enter a valid email address.</div></div>
-        <div class="f"><label for="a-nat">Nationality</label><input id="a-nat" placeholder="South African"></div>
-        <div class="f"><label for="a-marital">Marital status</label>
-          <select id="a-marital"><option value="">Select</option><option>Single</option><option>Married in community of property</option><option>Married out of community (ANC)</option><option>Divorced</option><option>Widowed</option><option>Living with partner</option></select></div>
-        <div class="f full"><label for="a-addr">Current home address</label><input id="a-addr" autocomplete="street-address"></div>
-        <div class="f full"><label for="a-kin">Next of kin: name and number</label><input id="a-kin" placeholder="e.g. Anna Botha, 083 555 1234"></div>
+        <div class="f"><label for="a-home">Home telephone</label><input id="a-home" type="tel"></div><div class="f"><label for="a-work">Work telephone</label><input id="a-work" type="tel"></div><div class="f full"><label for="a-addr">Physical address</label><input id="a-addr" autocomplete="street-address"></div><div class="f full"><label for="a-post">Postal address</label><input id="a-post" ></div><div class="f full"><label for="a-kin">Next of kin: name and number</label><input id="a-kin" placeholder="e.g. Anna Botha, 083 555 1234"></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Your bank details</h2>
+      <p class="hint">Used to check your income and set up your rental payments if you are approved. Optional, but it speeds things up.</p>
+      <div class="grid">
+        <div class="f"><label for="bk-bank">Bank</label><input id="bk-bank" ></div><div class="f"><label for="bk-branch">Branch</label><input id="bk-branch" ></div><div class="f"><label for="bk-code">Branch code</label><input id="bk-code" inputmode="numeric"></div><div class="f"><label for="bk-acc">Account number</label><input id="bk-acc" inputmode="numeric" autocomplete="off"></div><div class="f full"><label for="bk-type">Account type</label><select id="bk-type"><option value="">Select</option><option>Cheque</option><option>Savings</option><option>Transmission</option><option>Other</option></select></div>
       </div>
     </section>
 
@@ -180,16 +186,10 @@ input:focus-visible, select:focus-visible, textarea:focus-visible, a.btn:focus-v
       <h2>Work and income</h2>
       <p class="hint">We use this to check that the rental is affordable.</p>
       <div class="grid">
-        <div class="f"><label for="emp-status">Employment</label>
-          <select id="emp-status"><option value="">Select</option><option>Permanent</option><option>Contract</option><option>Self-employed</option><option>Student</option><option>Retired</option><option>Not working</option></select></div>
-        <div class="f"><label for="emp-employer">Employer or business</label><input id="emp-employer"></div>
-        <div class="f"><label for="emp-title">Job title</label><input id="emp-title"></div>
-        <div class="f"><label for="emp-years">Time in this job</label><input id="emp-years" placeholder="e.g. 3 years"></div>
-        <div class="f full"><label for="emp-phone">Employer or HR contact number</label><input id="emp-phone" type="tel"></div>
+        <div class="f"><label for="emp-status">Employment</label><select id="emp-status"><option value="">Select</option><option>Permanent</option><option>Contract</option><option>Self-employed</option><option>Student</option><option>Retired</option><option>Not working</option></select></div><div class="f"><label for="emp-title">Occupation or job title</label><input id="emp-title" ></div><div class="f"><label for="emp-employer">Employer or business</label><input id="emp-employer" ></div><div class="f"><label for="emp-years">Time in this job</label><input id="emp-years" placeholder="e.g. 3 years"></div><div class="f full"><label for="emp-addr">Employer’s address</label><input id="emp-addr" ></div><div class="f full"><label for="emp-phone">Employer or HR contact number</label><input id="emp-phone" type="tel"></div>
         <div class="f"><label for="a-income">Gross monthly income <span class="req">*</span></label>
           <input id="a-income" data-req="1" inputmode="numeric" placeholder="R"><div class="err-msg">Enter your gross monthly income.</div></div>
-        <div class="f"><label for="a-net">Nett monthly income</label><input id="a-net" inputmode="numeric" placeholder="R"></div>
-        <div class="f full"><label for="a-exp">Monthly expenses and debt repayments</label><input id="a-exp" inputmode="numeric" placeholder="R"></div>
+        <div class="f"><label for="a-net">Nett monthly income</label><input id="a-net" inputmode="numeric" placeholder="R"></div><div class="f full"><label for="a-exp">Monthly expenses and debt repayments</label><input id="a-exp" inputmode="numeric" placeholder="R"></div>
       </div>
     </section>
 
@@ -199,12 +199,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible, a.btn:focus-v
       <label class="toggle"><input type="checkbox" id="co-on"> <span>Yes, add a second applicant</span></label>
       <div class="sub" id="co-box">
         <div class="grid">
-          <div class="f full"><label for="b-name">Full name and surname</label><input id="b-name"></div>
-          <div class="f"><label for="b-id">ID or passport number</label><input id="b-id" inputmode="numeric"></div>
-          <div class="f"><label for="b-cell">Cell number</label><input id="b-cell" type="tel"></div>
-          <div class="f full"><label for="b-email">Email address</label><input id="b-email" type="email"></div>
-          <div class="f"><label for="b-employer">Employer</label><input id="b-employer"></div>
-          <div class="f"><label for="b-income">Gross monthly income</label><input id="b-income" inputmode="numeric" placeholder="R"></div>
+          <div class="f full"><label for="b-name">Full name and surname</label><input id="b-name" ></div><div class="f"><label for="b-maiden">Maiden name, if applicable</label><input id="b-maiden" ></div><div class="f"><label for="b-id">ID or passport number</label><input id="b-id" inputmode="numeric"></div><div class="f"><label for="b-dob">Date of birth</label><input id="b-dob" type="date"></div><div class="f"><label for="b-nat">Nationality</label><input id="b-nat" ></div><div class="f full"><label for="b-marital">Marital status</label><select id="b-marital"><option value="">Select</option><option>Single</option><option>Married in community of property</option><option>Married out of community (ANC)</option><option>Divorced</option><option>Widowed</option><option>Living with partner</option></select></div><div class="f"><label for="b-cell">Cell number</label><input id="b-cell" type="tel"></div><div class="f"><label for="b-tel">Home or work telephone</label><input id="b-tel" type="tel"></div><div class="f full"><label for="b-email">Email address</label><input id="b-email" type="email"></div><div class="f full"><label for="b-addr">Physical address</label><input id="b-addr" ></div><div class="f full"><label for="b-post">Postal address</label><input id="b-post" ></div><div class="f full"><label for="b-kin">Next of kin: name and number</label><input id="b-kin" ></div><div class="f"><label for="b-bank">Bank</label><input id="b-bank" ></div><div class="f"><label for="b-branch">Branch</label><input id="b-branch" ></div><div class="f"><label for="b-code">Branch code</label><input id="b-code" inputmode="numeric"></div><div class="f"><label for="b-acc">Account number</label><input id="b-acc" inputmode="numeric"></div><div class="f full"><label for="b-acctype">Account type</label><select id="b-acctype"><option value="">Select</option><option>Cheque</option><option>Savings</option><option>Transmission</option><option>Other</option></select></div><div class="f"><label for="b-occ">Occupation or job title</label><input id="b-occ" ></div><div class="f"><label for="b-employer">Employer</label><input id="b-employer" ></div><div class="f"><label for="b-income">Gross monthly income</label><input id="b-income" inputmode="numeric" placeholder="R"></div><div class="f"><label for="b-net">Nett monthly income</label><input id="b-net" inputmode="numeric" placeholder="R"></div><div class="f full"><label for="b-exp">Monthly expenses</label><input id="b-exp" inputmode="numeric" placeholder="R"></div>
         </div>
       </div>
     </section>
@@ -212,26 +207,23 @@ input:focus-visible, select:focus-visible, textarea:focus-visible, a.btn:focus-v
     <section class="card">
       <h2>Who will live there</h2>
       <div class="grid">
-        <div class="f"><label for="h-adults">Adults</label><input id="h-adults" type="number" min="1" inputmode="numeric"></div>
-        <div class="f"><label for="h-kids">Children (and their ages)</label><input id="h-kids" placeholder="e.g. 2 (4 and 7)"></div>
-        <div class="f"><label for="h-pets">Pets?</label>
-          <select id="h-pets"><option>No</option><option>Yes</option></select></div>
-        <div class="f"><label for="h-pets-d">If yes, what pets?</label><input id="h-pets-d" placeholder="e.g. 1 small dog"></div>
-        <div class="f"><label for="h-veh">Vehicles (type and registration)</label><input id="h-veh"></div>
-        <div class="f"><label for="h-smoke">Does anyone smoke?</label>
-          <select id="h-smoke"><option>No</option><option>Yes</option></select></div>
+        <div class="f"><label for="h-adults">Number of adults</label><input id="h-adults" type="number" min="1" inputmode="numeric"></div>
+        <div class="f"><label for="h-kids">Number of children</label><input id="h-kids" type="number" min="0" inputmode="numeric"></div>
+        <div class="f full"><label for="h-ages">Ages of children</label><input id="h-ages" ></div>
+        <div class="f"><label for="h-pets">Pets?</label><select id="h-pets"><option>No</option><option>Yes</option></select></div>
+        <div class="f"><label for="h-pets-d">If yes, how many and what type?</label><input id="h-pets-d" placeholder="e.g. 1 small dog"></div><div class="f"><label for="h-veh1">Vehicle 1: type and registration</label><input id="h-veh1" ></div><div class="f"><label for="h-veh2">Vehicle 2: type and registration</label><input id="h-veh2" ></div>
+        <div class="f full"><label for="h-smoke">Does anyone smoke?</label><select id="h-smoke"><option>No</option><option>Yes</option></select></div>
       </div>
     </section>
 
     <section class="card">
-      <h2>Credit history</h2>
+      <h2>Credit and background</h2>
       <p class="hint">Honest answers help. A past problem does not automatically count against you.</p>
       <div class="grid">
-        <div class="f"><label for="bg-j">Any judgements or defaults against you?</label>
-          <select id="bg-j"><option>No</option><option>Yes</option></select></div>
-        <div class="f"><label for="bg-d">Are you under debt review?</label>
-          <select id="bg-d"><option>No</option><option>Yes</option></select></div>
-        <div class="f full"><label for="bg-n">If you answered yes, tell us more</label><textarea id="bg-n"></textarea></div>
+        <div class="f"><label for="bg-j">Any judgements or defaults against you?</label><select id="bg-j"><option>No</option><option>Yes</option></select></div>
+        <div class="f"><label for="bg-d">Are you or have you been under debt review?</label><select id="bg-d"><option>No</option><option>Yes</option></select></div>
+        <div class="f full"><label for="bg-c">Any criminal convictions?</label><select id="bg-c"><option>No</option><option>Yes</option></select></div>
+        <div class="f full"><label for="bg-n">If you answered yes to any of these, tell us more</label><textarea id="bg-n"></textarea></div>
       </div>
     </section>
 
@@ -346,12 +338,13 @@ input:focus-visible, select:focus-visible, textarea:focus-visible, a.btn:focus-v
     var S = [];
     function sec(title, pairs) { var items = pairs.filter(function (p) { return p[1]; }); if (items.length) S.push({ title: title, items: items }); }
     sec("Property", [["Property address", val("prop")], ["Monthly rental", val("rental")], ["Preferred move-in date", val("movein")]]);
-    sec("Applicant", [["Name", val("a-name")], ["ID or passport", val("a-id")], ["Date of birth", val("a-dob")], ["Cell", val("a-cell")], ["Email", val("a-email")], ["Nationality", val("a-nat")], ["Marital status", val("a-marital")], ["Home address", val("a-addr")], ["Next of kin", val("a-kin")]]);
+    sec("Applicant", [["Full name", val("a-name")], ["Maiden name", val("a-maiden")], ["ID or passport", val("a-id")], ["Date of birth", val("a-dob")], ["Nationality", val("a-nat")], ["Marital status", val("a-marital")], ["Cell", val("a-cell")], ["Home telephone", val("a-home")], ["Work telephone", val("a-work")], ["Email", val("a-email")], ["Physical address", val("a-addr")], ["Postal address", val("a-post")], ["Next of kin and number", val("a-kin")]]);
+    sec("Bank details", [["Bank", val("bk-bank")], ["Branch", val("bk-branch")], ["Branch code", val("bk-code")], ["Account number", val("bk-acc")], ["Account type", val("bk-type")]]);
     sec("Current home", [["Rent or own", val("acc-type")], ["Rent paid now", val("acc-rent")], ["Time there", val("acc-since")], ["Landlord or agent", val("acc-landlord")], ["Reason for moving", val("acc-reason")]]);
-    sec("Work and income", [["Employment", val("emp-status")], ["Employer", val("emp-employer")], ["Job title", val("emp-title")], ["Time in job", val("emp-years")], ["Employer contact", val("emp-phone")], ["Gross monthly income", val("a-income")], ["Nett monthly income", val("a-net")], ["Monthly expenses", val("a-exp")]]);
-    if ($("co-on").checked) sec("Second applicant", [["Name", val("b-name")], ["ID or passport", val("b-id")], ["Cell", val("b-cell")], ["Email", val("b-email")], ["Employer", val("b-employer")], ["Gross monthly income", val("b-income")]]);
-    sec("Household", [["Adults", val("h-adults")], ["Children", val("h-kids")], ["Pets", val("h-pets") + (val("h-pets-d") ? " (" + val("h-pets-d") + ")" : "")], ["Vehicles", val("h-veh")], ["Smokers", val("h-smoke")]]);
-    sec("Credit history", [["Judgements or defaults", val("bg-j")], ["Under debt review", val("bg-d")], ["Details", val("bg-n")]]);
+    sec("Work and income", [["Employment", val("emp-status")], ["Occupation", val("emp-title")], ["Employer", val("emp-employer")], ["Employer address", val("emp-addr")], ["Time in job", val("emp-years")], ["Employer contact", val("emp-phone")], ["Gross monthly income", val("a-income")], ["Nett monthly income", val("a-net")], ["Monthly expenses", val("a-exp")]]);
+    if ($("co-on").checked) sec("Second applicant", [["Full name", val("b-name")], ["Maiden name", val("b-maiden")], ["ID or passport", val("b-id")], ["Date of birth", val("b-dob")], ["Nationality", val("b-nat")], ["Marital status", val("b-marital")], ["Cell", val("b-cell")], ["Home or work telephone", val("b-tel")], ["Email", val("b-email")], ["Physical address", val("b-addr")], ["Postal address", val("b-post")], ["Next of kin and number", val("b-kin")], ["Bank", val("b-bank")], ["Branch", val("b-branch")], ["Branch code", val("b-code")], ["Account number", val("b-acc")], ["Account type", val("b-acctype")], ["Occupation", val("b-occ")], ["Employer", val("b-employer")], ["Gross monthly income", val("b-income")], ["Nett monthly income", val("b-net")], ["Monthly expenses", val("b-exp")]]);
+    sec("Household", [["Adults", val("h-adults")], ["Children", val("h-kids")], ["Ages of children", val("h-ages")], ["Pets", val("h-pets") + (val("h-pets-d") ? " (" + val("h-pets-d") + ")" : "")], ["Vehicle 1", val("h-veh1")], ["Vehicle 2", val("h-veh2")], ["Smokers", val("h-smoke")]]);
+    sec("Credit and background", [["Judgements or defaults", val("bg-j")], ["Under debt review", val("bg-d")], ["Criminal convictions", val("bg-c")], ["Details", val("bg-n")]]);
     sec("Declaration", [["Confirmed", "Information is true. Credit check and verification of details allowed."], ["Signed (typed)", val("sign") + " on " + todayText]]);
     return S;
   }
